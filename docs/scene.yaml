@@ -1,0 +1,104 @@
+sources:
+    mapzen:
+        type: TopoJSON
+        url: https://tile.mapzen.com/mapzen/vector/v1/all/{z}/{x}/{y}.topojson
+        url_params:
+            api_key: mapzen-tDHBHDp
+    hillsborough:
+        type: GeoJSON
+        url: https://gist.githubusercontent.com/trescube/226ab960d8fb1b6a2b75acb0933248ce/raw/82ced6b53b0bcb4c00caefaf2aeec86f5c9481f8/us-fl-hillsborough.manholes.geojson
+
+    pinellaspark:
+        type: GeoJSON
+        url: https://gist.githubusercontent.com/trescube/0784740ccf6867b2ec40bb1904e72b52/raw/795af08b6374838c15f93af0d7ff4f0905950a1c/us-fl-city-of-pinellas-park.manholes.geojson
+
+    venice:
+        type: GeoJSON
+        url: https://gist.githubusercontent.com/trescube/3bc1df7a50353a110719b43a48880fe9/raw/6cc5e71704a0d54390353f588d74ef19e837438a/us-fl-city-of-venice.manholes.geojson
+
+    hernando:
+        type: GeoJSON
+        url: https://gist.githubusercontent.com/trescube/231279f0b071426e4750f63cff177513/raw/a4293e085ae5722bd85c5be186462a370029913d/us-fl-hernando.manholes.geojson
+
+    nassau:
+        type: GeoJSON
+        url: https://gist.githubusercontent.com/trescube/a8c47d026e8b5a03940debf24e7c4d50/raw/56bdd7a82ee434bcc6c683f8d287a98a117da788/us-fl-nassau.manholes.geojson
+
+    kent:
+        type: GeoJSON
+        url: https://gist.githubusercontent.com/trescube/e82ebcb617f018653852a25d78497b86/raw/ea75c85ff8ef4ac71af40c8d40c7866720d6ab2f/us-de-kent.manholes.geojson
+
+    dc:
+        type: GeoJSON
+        url: https://gist.githubusercontent.com/trescube/3dbf138ce46aa563fe93e4b235d9e22b/raw/378662b559f92ef721ae36302411e35daa95c251/us-dc-statewide.geojson
+
+layers:
+    earth:
+        data: { source: mapzen }
+        draw:
+            polygons:
+                order: 0
+                color: darkgreen
+    water:
+        data: { source: mapzen }
+        draw:
+            polygons:
+                order: 1
+                color: lightblue
+
+    roads:
+        data: { source: mapzen }
+        draw:
+            lines:
+                order: 2
+                color: white
+                width: 1.5px
+
+    hillsborough_manholes:
+        data: { source: hillsborough }
+        draw:
+            points:
+                order: 3
+                color: black
+
+    pinellaspark_manholes:
+        data: { source: pinellaspark }
+        draw:
+            points:
+                order: 3
+                color: red
+
+    venice_manholes:
+        data: { source: venice }
+        draw:
+            points:
+                order: 3
+                color: brown
+
+    hernando_manholes:
+        data: { source: hernando }
+        draw:
+            points:
+                order: 3
+                color: purple
+
+    nassau_manholes:
+        data: { source: nassau }
+        draw:
+            points:
+                order: 3
+                color: pink
+
+    kent_manholes:
+        data: { source: kent }
+        draw:
+            points:
+                order: 3
+                color: cyan
+
+    dc_manholes:
+        data: { source: dc }
+        draw:
+            points:
+                order: 3
+                color: lightgreen

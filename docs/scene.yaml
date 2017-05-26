@@ -32,6 +32,10 @@ sources:
         type: GeoJSON
         url: https://gist.githubusercontent.com/trescube/3dbf138ce46aa563fe93e4b235d9e22b/raw/378662b559f92ef721ae36302411e35daa95c251/us-dc-statewide.geojson
 
+    miami:
+        type: GeoJSON
+        url: https://gist.githubusercontent.com/trescube/7329d0d6f8eca3bc91ee8ef5d5d42b20/raw/7464a80658a0e7eecd57542ea8bc2ca72abf70ea/us-fl-miami-dade.manholes.geojson
+
 layers:
     earth:
         data: { source: mapzen }
@@ -98,6 +102,13 @@ layers:
 
     dc_manholes:
         data: { source: dc }
+        draw:
+            points:
+                order: 3
+                color: white
+
+    miami_manholes:
+        data: { source: miami }
         draw:
             points:
                 order: 3

@@ -38,7 +38,7 @@ layers:
         draw:
             polygons:
                 order: 0
-                color: darkgreen
+                color: darkgrey
     water:
         data: { source: mapzen }
         draw:
@@ -51,7 +51,7 @@ layers:
         draw:
             lines:
                 order: 2
-                color: white
+                color: lightgrey
                 width: 1.5px
 
     hillsborough_manholes:
@@ -59,46 +59,46 @@ layers:
         draw:
             points:
                 order: 3
-                color: black
+                color: white
 
     pinellaspark_manholes:
         data: { source: pinellaspark }
         draw:
             points:
                 order: 3
-                color: red
+                color: white
 
     venice_manholes:
         data: { source: venice }
         draw:
             points:
                 order: 3
-                color: brown
+                color: white
 
     hernando_manholes:
         data: { source: hernando }
         draw:
             points:
                 order: 3
-                color: purple
+                color: white
 
     nassau_manholes:
         data: { source: nassau }
         draw:
             points:
                 order: 3
-                color: pink
+                color: white
 
     kent_manholes:
         data: { source: kent }
         draw:
             points:
                 order: 3
-                color: cyan
+                color: white
 
     dc_manholes:
         data: { source: dc }
         draw:
             points:
                 order: 3
-                color: lightgreen
+                color: white

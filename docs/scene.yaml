@@ -3,7 +3,7 @@ sources:
         type: TopoJSON
         url: https://tile.mapzen.com/mapzen/vector/v1/all/{z}/{x}/{y}.topojson
         url_params:
-            api_key: mapzen-tDHBHDp
+            api_key: mapzen-CFbBe8d
     hillsborough:
         type: GeoJSON
         url: https://gist.githubusercontent.com/trescube/226ab960d8fb1b6a2b75acb0933248ce/raw/82ced6b53b0bcb4c00caefaf2aeec86f5c9481f8/us-fl-hillsborough.manholes.geojson
